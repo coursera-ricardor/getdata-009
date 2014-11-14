@@ -81,6 +81,9 @@ I_Programs <- paste0(dWorkingDir,I_Programs)
 
 I_Directory <- getwd() ## Saves the actual working directory
 
+if (! file.exists(dWorkingDir ) ){
+    stop(paste("Working Directory ",dWorkingDir," not available"))        
+}
 # =================================================================================
 #  Loading auxiliary scripts with functions
 # =================================================================================
@@ -103,7 +106,7 @@ docFile <- paste0(dDataDir,"/SmartphonesDS.zip")
 if ( ! getFile( fileUrl, docFile) ) {
   # call_marshall
   setwd(I_Directory)
-  stop(paste("File ",docFile,"no available"))  
+  stop(paste("File ",docFile,"not available"))  
   
 }
 
