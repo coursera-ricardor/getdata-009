@@ -10,11 +10,11 @@ You will be required to submit:
 
 # Program: run_analysis.R  
 # Author: Ricardo Rodriguez Erdmenger 2014/11
-#
-#  The objective of this script is to:
-#
-#   You should create one R script called run_analysis.R 
-#   
+
+  The objective of this script is to:
+
+   You should create one R script called run_analysis.R 
+   
    1) Merges the training and the test sets to create one data set.
    2) Extracts only the measurements on the mean and standard deviation for each measurement. 
    3) Uses descriptive activity names to name the ACTIVITIES in the data set
