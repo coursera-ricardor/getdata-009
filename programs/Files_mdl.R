@@ -54,7 +54,7 @@ writeMyndf <- function(dfData = NULL, cDestFile = ""){
     if ( file.exists( cDestFile ) ) {
         # Ask for User Input
         lDownload <- "X"
-        message("File allready Exists, Do You want to export it again?")
+        message(paste("File:",cDestFile,"allready Exists, Do You want to export it again?"))
         while(length(grep(lDownload,"YN", ignore.case = TRUE)) == 0  ){
             lDownload <- readline(prompt = "[y|n]: ")
         }
