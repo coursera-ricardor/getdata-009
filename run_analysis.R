@@ -434,12 +434,6 @@ test01 <- dfMeanStd[c(1:100),c(1,2,grep("[_X|_Y|_Z]$",names(dfMeanStd),ignore.ca
 test02 <- gather(test01,Formula,value,-(1:2))
 
 
-
-#
-test02[,3] <- gsub("tBody","time_Body_",test02[,3])
-test02[,3] <- gsub("tGravity","time_Gravity_",test02[,3])
-test02[,3] <- gsub("fBody","fourier_Body_",test02[,3])
-
 test03 <- separate(test02,Formula,c("origin","base","device","measure","txt","axis"),sep="_")
 #
 # Process Jerk

@@ -191,4 +191,3 @@ find_subject_group <- function (cGroup = "", cDirectorypaths = NULL) {
     ttSubjects
     
 }
-
