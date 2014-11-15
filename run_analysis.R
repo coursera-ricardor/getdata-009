@@ -1,10 +1,10 @@
 # Program: run_analysis.R  
 # Author: Ricardo Rodriguez Erdmenger 2014/11
-#
+#   additional information in the README.md file
 
 # NOTES About the Dataset.
 # License:
-#   ========
+# =================================================================================
 #   Use of this dataset in publications must be acknowledged by referencing the following publication [1] 
 # 
 # [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. 
@@ -241,7 +241,6 @@ rm(docFile,fileUrl)
 # =================================================================================
 source(paste0(I_Programs,"/subject_activity_feature.R"))
 
-
 # =================================================================================
 # Reading and merging the files
 # =================================================================================
@@ -292,6 +291,29 @@ vMerge1 <- unique(c(gsub("train","XXXXXXXX",vtrainFileNames),gsub("test","XXXXXX
 #       vMergeDir, vDirectorypaths, vtrainFileNames and vtestFileNames vectors have
 #       the RELATIVE Directory path. In this script the use of these variables would be like:
 #
+
+# =================================================================================
+# Merge calculated Datasets:
+#       smartphones_summary.csv NOTE: I_temp Directory
+#
+#       1.1) Identify Subjects from UCI HAR Dataset/XXXXXXXX/subject_XXXXXXXX.txt file, where
+#           XXXXXXXX could be "test" or "train"
+#       1.2) Identify Activities from UCI HAR Dataset/XXXXXXXX/y_XXXXXXXX.txt file, where
+#           XXXXXXXX could be "test" or "train"
+#       1.3) Data from UCI HAR Dataset/XXXXXXXX/X_XXXXXXXX.txt file, where
+#           XXXXXXXX could be "test" or "train"
+#           note: field names are taken from "vfeatures" file pre-processed.
+#       EXPORT -
+#           vMergeDir1[1] 
+#              [1] "UCI HAR Dataset/merged/"
+#       dWorkingDir                       I_temp / gsub("XXXXXXXX","merged",eachFileName[1])
+#       C:/ricardor/Coursera/getdata-009 /tmp    / UCI HAR Dataset/merged/  smartphones_summary.csv
+#       
+# =================================================================================
+source(paste0(I_Programs,"/merge_test_train_calcs.R"))
+
+# =================================================================================
+# Merge Inertial Signals
 #       Basic string with generic value (XXXXXXXX) changable to: train, test, merged
 #       "UCI HAR Dataset/XXXXXXXX/Inertial Signals/body_acc_x_XXXXXXXX.txt"
 #
@@ -303,19 +325,9 @@ vMerge1 <- unique(c(gsub("train","XXXXXXXX",vtrainFileNames),gsub("test","XXXXXX
 #       EXPORT -
 #       dWorkingDir                       I_temp / gsub("XXXXXXXX","merged",eachFileName[1])
 #       C:/ricardor/Coursera/getdata-009 /tmp    / UCI HAR Dataset/merged/Inertial Signals/body_acc_x_merged.txt
-
-# =================================================================================
-# Merge calculated Datasets
-# =================================================================================
-source(paste0(I_Programs,"/merge_test_train_calcs.R"))
-
-# =================================================================================
-# Merge Inertial Signals
 # =================================================================================
 source(paste0(I_Programs,"/merge_inertial_signals.R"))
             
-
-
 # =================================================================================
 # 2) Extracts only the measurements on the mean and standard deviation for each measurement. 
 #
@@ -401,62 +413,110 @@ source(paste0(I_Programs,"/merge_inertial_signals.R"))
 #       min(): Smallest value in array .....
 # "
 #
-# =================================================================================
 # Analysis:
 #
-# =================================================================================
 #
 # Load the merged dataset
 #
-cTmpDir <- paste0(dWorkingDir,I_temp,"/",vMergeDir[1])
+# To facilitate the reviewing process, copy the file to tidyData Directory
 #
+cTmpDir <- paste0(dWorkingDir,I_temp,"/",vMergeDir[1])
 cFile <- paste0( cTmpDir, "smartphones_summary.csv")
+file.copy(cFile,dExportDataDir)
+#
+cFile <- paste0( dExportDataDir, "/","smartphones_summary.csv")
 mergeDataSet <- read.csv(cFile)
 #
 # Detect the fields with mean or std ignoring case
 # only will process mean() -> mean_fn and std() -> std_fn
 # dfMeanStd<- mergeDataSet[,c(1,2,grep("mean|std",names(mergeDataSet),ignore.case = TRUE))]
-dfMeanStd<- mergeDataSet[,c(1,2,grep("mean|std",names(mergeDataSet)))]
-#
-# Testings
-#
-# test01 <- dfMeanStd[c(1:20),c(1,2,grep("tBodyAcc_mean_fn",names(dfMeanStd),ignore.case = TRUE))]
-# test02 <- gather(test01,Tranformation,value,-(1:2))
 
+dfMeanStd <- mergeDataSet[,c(1,2,grep("mean.fn|std.fn",names(mergeDataSet)))]
+cFile <- paste0( dExportDataDir, "/","smartphones_mean_std_2.csv")
+writeMyndf(dfMeanStd,cFile)
+# =================================================================================
 #
-# test10 <- dfMeanStd[c(1:10),]
-# test12 <- gather(test10,Tranformation,value,-(1:2))
+# 3) Uses descriptive activity names to name the ACTIVITIES in the data set
 #
-# Process different groups
-# 1st group - ending with X,Y,Z
+# =================================================================================
+cFile <- paste0( dExportDataDir, "/", "activity.csv")
+df_activity <- read.csv(cFile)
 #
-test01 <- dfMeanStd[c(1:100),c(1,2,grep("[_X|_Y|_Z]$",names(dfMeanStd),ignore.case = TRUE))]
+# HELP from data.table
 #
-# Construct the Columns to be parsed
+library(data.table)
+dt_activity <- data.table(df_activity)
+rm(df_activity)
+setkey(dt_activity,activity_id)
 #
-test02 <- gather(test01,Formula,value,-(1:2))
+dt_MeanStd <- data.table(dfMeanStd)
+rm(dfMeanStd)
+setkey(dt_MeanStd,activity_id)
+# =================================================================================
+# 4) Appropriately labels the data set with descriptive variable names.
+# =================================================================================
+#
+# merge by key
+#
+dt_MeanStd_descriptive <- merge(dt_activity,dt_MeanStd)
+cFile <- paste0( dExportDataDir, "/", "smartphones_MeanStd_descriptive_3.csv")
+writeMyndf(dt_MeanStd_descriptive,cFile)
+rm("dt_MeanStd","dt_activity")
 
 
-test03 <- separate(test02,Formula,c("origin","base","device","measure","txt","axis"),sep="_")
-#
-# Process Jerk
-#
-test03[,5] <- gsub("AccJerk","AJerk",test03[,5])
-test03[,5] <- gsub("GyroJerk","GJerk",test03[,5])
-#
-test03[,5] <- gsub("Acc","Accelerometer",test03[,5])
-test03[,5] <- gsub("Gyro","Gyroscope",test03[,5])
-#
-test03[,5] <- gsub("AJerk","Accelerometer_Jerk",test03[,5])
-test03[,5] <- gsub("GJerk","Gyroscope_Jerk",test03[,5])
-
-
-# call marshall
-# rm(mergeDataSet)
+# =================================================================================
+# 5) From the data set in step 4, creates a second, independent tidy data set with 
+# the average of each variable for each activity and each subject.
+# =================================================================================
 #
 # HELP from tidyr
 #
 library(tidyr)
+cFile <- paste0( dExportDataDir, "/", "smartphones_MeanStd_descriptive_3.csv")
+df_MeanStd_descriptive <- read.csv(cFile)
+#
+# with the average of each variable for each activity and each subject.
+#
+dfMean <- df_MeanStd_descriptive[,c(1,2,3,grep("mean.fn",names(df_MeanStd_descriptive)))]
+rm(df_MeanStd_descriptive)
+#
+# Analysis
+#
+# Two set of possible variables:
+#   3 underscores - ending with ".fn"
+#   4 underscores - ending with "_X|_Y|_Z"
+#       two sets of files
+#
+set01fn <- dfMean[,c(1,2,3,grep(".fn$",names(dfMean)))]
+set02XYZ <- dfMean[,c(1,2,3,grep("[_X|_Y|_Z]$",names(dfMean)))]
+rm(dfMean)
+
+# test02 <- gather(test01,Tranformation,value,-(1:3))
+#
+# First Dataset Magnitude
+#
+set01fn <- gather(set01fn,Transformation,result.fn,-(1:3))
+# Separate
+set01fn <- separate(set01fn,Transformation,c("origin","base","magnitude","measure"),sep="_")
+# fix Magnitude column
+set01fn[,"magnitude"] <- gsub("Mag","",set01fn[,"magnitude"])
+
+#
+# Second Dataset Axial
+#  - ending with X,Y,Z
+#
+set02XYZ <- gather(set02XYZ,Transformation,result.fn,-(1:3))
+set02XYZ <- separate(set02XYZ,Transformation,c("origin","base","device","measure","axis"),sep="_")
+
+#
+# writing the files
+#
+cFile <- paste0( dExportDataDir, "/", "smartphones_Mean_tidy_Magnitude_5.csv")
+writeMyndf(set01fn,cFile)
+#
+cFile <- paste0( dExportDataDir, "/", "smartphones_Mean_tidy_Axis_5.csv")
+writeMyndf(set02XYZ,cFile)
+rm("set01fn","set02XYZ")
 
 
 #
