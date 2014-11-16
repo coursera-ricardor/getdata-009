@@ -25,6 +25,7 @@ programs/codebook.R
 
 Table: activity.csv
      |------->activity_id             integer   [1..6]
+     
      |------->activity_description    character [WALKING|WALKING_UPSTAIRS|WALKING_DOWNSTAIRS|SITTING|STANDING|LAYING]
 
 Table: subject.csv
@@ -40,13 +41,21 @@ Table: features.csv
      
 Table: smartphones_Mean_tidy_Axis_5.csv
      |------->activity_id             integer   [1..6]
+     
      |------->activity_description    character [WALKING|WALKING_UPSTAIRS|WALKING_DOWNSTAIRS|SITTING|STANDING|LAYING]
+     
      |------->subject_id              integer   [1..30]
+     
      |------->origin                  character [time|fourier]
+     
      |------->base                    character [Body|Gravity]
+     
      |------->device                  character [Acc|AccJerk|Gyro|GyroJerk]
+     
      |------->measure                 character [mean.fn]
+     
      |------->axis                    character [X|Y|Z]
+     
      |------->result.fn    
 
 Table: smartphones_Mean_tidy_Magnitude_5.csv
