@@ -120,4 +120,7 @@ write.table(df_CodeBook,cFile,row.names = FALSE, col.names = FALSE, quote = FALS
 
 setwd(I_Directory)
 
-rm(list=ls())
+rm("dfTable","df_CodeBook","eachFile","eachField")
+rm("lFile","nrep","cFieldDesc","dData")
+rm("dWorkingDir","cFile")
+rm(list = ls(pattern = "I_"))
