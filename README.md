@@ -5,8 +5,9 @@ Coursera repository Getting and Cleaning Data
 
 Quick View at the end of the script:
 Working Directory  (created by Git)
-	|___data (created by script)
-		|___UCI HAR Dataset
+
+	+___data (created by script)
+		+___UCI HAR Dataset
 			|___test
 				|___Inertial Signals
 			|___train
@@ -23,7 +24,7 @@ data.table
 tidyr
 
 To run the script
-Please, READ the "IMPORTANT" section in this document.
+**Please, READ the "IMPORTANT" section in this document.**
 
 source('<directory where you download Git>/run_analysis.R')	
 
@@ -77,13 +78,12 @@ b) the output files will be in csv format, not txt.This to read them faster in E
 			   dWorkingDir                     I_export_Data / subject.csv
 			   C:/ricardor/Coursera/getdata-009 /tidyData    / subject.csv"
 			   dExportDataDir = dWorkingDir + I_export_Data
-
-		
 		1.3) EXPORT - source(paste0(I_Programs,"/merge_test_train_calcs.R"))
        dWorkingDir                       I_temp / gsub("XXXXXXXX","merged",eachFileName[1])
        C:/ricardor/Coursera/getdata-009 /tmp    / UCI HAR Dataset/merged/Inertial Signals/body_acc_x_merged.txt
 	   
-Merge Inertial Signals Directory
+*Merge Inertial Signals Directory*
+
        Basic string with generic value (XXXXXXXX) changable to: train, test, merged
        "UCI HAR Dataset/XXXXXXXX/Inertial Signals/body_acc_x_XXXXXXXX.txt"
 
