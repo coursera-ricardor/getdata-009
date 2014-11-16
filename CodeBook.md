@@ -14,8 +14,9 @@ Tables:
 * smartphones_Mean_tidy_Magnitude_5
 * smartphones_MeanStd_descriptive_3
 
-programs/codebook.R 
+programs/codebook.R
   produce part of the documentation.
+  
 =
 Table: activity.csv
 
