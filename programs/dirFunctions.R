@@ -25,20 +25,21 @@ manageDir <- function(cDirectory = "" ,
   ## Set the working environment
   ##
   if ( nchar( cDirectory ) != 0 ) {
-    if ( !file.exists( cDirectory ) ) {
+      
+    if ( ! file.exists( cDirectory ) ) {
       #
       # Verify create Directory flag
       #
       if ( lCreate == FALSE ){
         warning(paste("invalid path selected:",cDirectory))
         return(FALSE)
-      }
-      else {
+      } else {
         ## By now allows to create the full path
         ## to skip the validation of existance of the previous directory
-        dir.create(cDirectory, recursive = TRUE)        
+        dir.create(cDirectory, recursive = TRUE)     
       }
-    } ## endif file.exists
+      
+    } # endif file.exists
     
     if ( lSetWD == TRUE ) {
         setwd(cDirectory)
@@ -46,7 +47,8 @@ manageDir <- function(cDirectory = "" ,
     } else {
         return(TRUE)
     }# end SetWD
-  }
+    
+  } # end nchar
   else {
     warning("Verify Path name, is empty")
     return(FALSE)

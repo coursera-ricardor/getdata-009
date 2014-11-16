@@ -183,4 +183,6 @@ rm("tbl_err","row_2_fix","eachErr")
 #
 cwFile <- paste0( dExportDataDir, "/", "features.csv")
 writeMyndf(dfFeatures,cwFile)
+#
 rm(cFile,dfFeatures,cwFile)
+rm(vactivities,vfeatures,vtestFileNames,vtrainFileNames)

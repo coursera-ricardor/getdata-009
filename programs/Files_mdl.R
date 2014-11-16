@@ -95,10 +95,10 @@ getFile <- function (cUrl = "", cDestFile = "") {
     # Validating if the File allready exists
     #
     lDownload <- "Y"
-    if ( file.exists( docFile ) ) {
+    if ( file.exists( cDestFile ) ) {
         # Ask for User Input
         lDownload <- "X"
-        message("File allready Exists, Do You want to Download it again?")
+        message(paste("File ",cDestFile,"allready Exists, Do You want to Download it again?"))
         while(length(grep(lDownload,"YN", ignore.case = TRUE)) == 0  ){
             lDownload <- readline(prompt = "[y|n]: ")
         }

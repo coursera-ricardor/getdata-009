@@ -59,4 +59,4 @@ writeMyndf(df_merge,cwFile)
 #
 # clean memory
 #
-rm("df_x","df_subject","df_activity","df_merge","cFile","cwFile")
+rm("df_x","df_subject","df_activity","df_merge","cFile","cwFile","dfFeatures")

@@ -25,7 +25,8 @@ tidyr
 To run the script
 Please, READ the "IMPORTANT" section in this document.
 
-			 source('<directory where you download Git>/run_analysis.R')	
+source('<directory where you download Git>/run_analysis.R')	
+
 Tasks
 You will be required to submit: 
 1) a tidy data set as described below, 
@@ -55,6 +56,7 @@ IMPORTANT:
 a) You need to EDIT the script "run_analysis.R" to set your PERSONAL preferences in where to run the script and store all
 the files downloaded, expanded and produced.
 Look for the variables "I_" specially "dWorkingDir". The script won't run if you don't change this variable.
+b) the output files will be in csv format, not txt.This to read them faster in Excel and see the contents.
 
 =================================================================================
  Merge calculated Datasets
