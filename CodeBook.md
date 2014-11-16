@@ -1,5 +1,5 @@
 getdata-009
-===========
+
 
 Coursera Getting and Cleaning Data Project CodeBook 
 
@@ -22,11 +22,11 @@ smartphones_MeanStd_descriptive_3
 
 programs/codebook.R 
  - produce part of the documentation.
-===========
+
 Table: activity.csv
      |------->activity_id             integer   [1..6]
      |------->activity_description    character [WALKING|WALKING_UPSTAIRS|WALKING_DOWNSTAIRS|SITTING|STANDING|LAYING]
-===========
+
 Table: subject.csv
      |------->subject_id              integer   [1..30]
      |------->subject_code            character [Subject 1|Subject 2|Subject 3|Subject 4|Subject 5|Subject 6|Subject 7|Subject 8|Subject 9|Subject 10|Subject 11|Subject 12|Subject 13|Subject 14|Subject 15|Subject 16|Subject 17|Subject 18|Subject 19|Subject 20|Subject 21|Subject 22|Subject 23|Subject 24|Subject 25|Subject 26|Subject 27|Subject 28|Subject 29|Subject 30]
