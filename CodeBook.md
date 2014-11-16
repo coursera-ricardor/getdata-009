@@ -3,8 +3,8 @@ getdata-009
 
 Coursera Getting and Cleaning Data Project CodeBook 
 
-> Sorry to be lazy, this section is incomplete
-programs/codebook.R produce part of the documentation.
+*Sorry to be **lazy**, this section is incomplete*
+**programs/codebook.R** produce part of the documentation.
 
 Tables:
 
