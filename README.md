@@ -7,7 +7,7 @@ Quick View at the end of the script:
 Working Directory  (created by Git)
 
 	+___data (created by script)
-		+___UCI HAR Dataset
+		|___UCI HAR Dataset
 			|___test
 				|___Inertial Signals
 			|___train
