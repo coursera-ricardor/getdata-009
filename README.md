@@ -51,16 +51,16 @@ From the data set in step 4, creates a second, independent tidy data set with th
 
 **Note:**
 
-a) The step 4 was included in the merging process, expandind the "features" as a field names of the calculated data set.
-b) Maybe you will see lots of unnecesary code and steps added to the simple merging process.
+a. The step 4 was included in the merging process, expandind the "features" as a field names of the calculated data set.
+b. Maybe you will see lots of unnecesary code and steps added to the simple merging process.
    I used this project as a personal training to learn more about R.
    
 **IMPORTANT:**
 
-a) You need to EDIT the script "run_analysis.R" to set your PERSONAL preferences in where to run the script and store all
+a. You need to EDIT the script "run_analysis.R" to set your PERSONAL preferences in where to run the script and store all
 the files downloaded, expanded and produced.
 Look for the variables "I_" specially "dWorkingDir". The script won't run if you don't change this variable.
-b) the output files will be in csv format, not txt.This to read them faster in Excel and see the contents.
+b. the output files will be in csv format, not txt.This to read them faster in Excel and see the contents.
 
 =================================================================================
 * Merge calculated Datasets*
