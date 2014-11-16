@@ -1,0 +1,882 @@
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Activity                                                                                    Página: 1
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeTheme         -1
+
+DatasheetGridlinesTh       -1                          DateCreated:               16/11/2014 8:20:50
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {574A3D4C-
+                                                                                  C452-4F23-835A-
+
+HideNewField:              Falso                       LastUpdated:               16/11/2014 8:21:39
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+PublishToWeb:              1                           ReadOnlyWhenDiscon         Falso
+RecordCount:               6                           ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tipo                       Tamaño
+
+
+         activity_id                                             Entero largo                             4
+
+         activity_description                                    Texto                                   50
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        ActivitySmartphones_Mean_tidy_Axis_5
+
+                            Activity                       Smartphones_Mean
+
+
+                    activity_id                          activity_id
+
+
+
+                 Attributes:                 No forzado
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+        ActivitySmartphones_Mean_tidy_Magnitude_5
+
+                            Activity                       Smartphones_Mean
+
+
+                    activity_id                          activity_id
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+Índices de tabla
+         Nombr                                    Número de
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Activity                                                                                    Página: 2
+
+
+
+
+         e                                        campos
+
+         activity_id                              1
+                   Campos:
+
+                   activity_id                scendente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Features                                                                                    Página: 3
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeTheme         -1
+
+DatasheetGridlinesTh       -1                          DateCreated:               16/11/2014 8:24:21
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {ED21D414-
+                                                                                  5260-41C8-B628-
+
+HideNewField:              Falso                       LastUpdated:               16/11/2014 8:25:38
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+PublishToWeb:              1                           ReadOnlyWhenDiscon         Falso
+RecordCount:               561                         ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tipo                       Tamaño
+
+
+         feature_id                                              Entero largo                             4
+
+         feature_field_name                                      Texto                                  100
+
+
+
+
+
+
+
+
+Índices de tabla
+         Nombr                                    Número de
+
+
+         feature_id                               1
+                   Campos:
+                   feature_id                 scendente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Smartphones_Mean_tidy_Axis_5                                                                Página: 4
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeTheme         -1
+
+DatasheetGridlinesTh       -1                          DateCreated:               16/11/2014 8:27:02
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {3A9AF49C-
+                                                                                  94FA-43FF-8746-
+
+HideNewField:              Falso                       LastUpdated:               16/11/2014 8:29:05
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+PublishToWeb:              1                           ReadOnlyWhenDiscon         Falso
+RecordCount:               247176                      ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tipo                       Tamaño
+
+
+         activity_id                                             Entero largo                             4
+
+         activity_description                                    Texto                                   50
+
+         subject_id                                              Entero largo                             4
+
+         origin                                                  Texto                                   50
+         base                                                    Texto                                   50
+
+         device                                                  Texto                                   50
+
+         measure                                                 Texto                                   50
+
+         axis                                                    Texto                                    3
+         resultfn                                                Doble                                    8
+
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        ActivitySmartphones_Mean_tidy_Axis_5
+
+                            Activity                       Smartphones_Mean
+
+                    activity_id                          activity_id
+
+
+
+                 Attributes:                 No forzado
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Smartphones_Mean_tidy_Axis_5                                                                Página: 5
+
+
+
+        SubjectSmartphones_Mean_tidy_Axis_5
+
+                             Subject                       Smartphones_Mean
+
+
+                    subject_id                           subject_id
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+Índices de tabla
+
+         Nombr                                    Número de
+
+         activity_id                              1
+                   Campos:
+
+                   activity_id                scendente
+
+
+
+
+
+         subject_id                               1
+
+                   Campos:
+                   subject_id                 scendente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Smartphones_Mean_tidy_Magnitude_5                                                           Página: 6
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeTheme         -1
+
+DatasheetGridlinesTh       -1                          DateCreated:               16/11/2014 8:29:43
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {AA28DBA5-
+                                                                                  9CF4-4803-8149-
+
+HideNewField:              Falso                       LastUpdated:               16/11/2014 8:30:53
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+PublishToWeb:              1                           ReadOnlyWhenDiscon         Falso
+RecordCount:               92691                       ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tipo                       Tamaño
+
+
+         activity_id                                             Entero largo                             4
+
+         activity_description                                    Texto                                   50
+
+         subject_id                                              Entero largo                             4
+
+         origin                                                  Texto                                   50
+         base                                                    Texto                                   50
+
+         magnitude                                               Texto                                   50
+
+         measure                                                 Texto                                   50
+
+         resultfn                                                Doble                                    8
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        ActivitySmartphones_Mean_tidy_Magnitude_5
+
+                            Activity                       Smartphones_Mean
+
+                    activity_id                          activity_id
+
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Smartphones_Mean_tidy_Magnitude_5                                                           Página: 7
+
+
+
+        SubjectSmartphones_Mean_tidy_Magnitude_5
+
+                             Subject                       Smartphones_Mean
+
+
+                    subject_id                           subject_id
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+Índices de tabla
+
+         Nombr                                    Número de
+
+         activity_id                              1
+                   Campos:
+
+                   activity_id                scendente
+
+
+
+
+
+         subject_id                               1
+
+                   Campos:
+                   subject_id                 scendente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Subject                                                                                     Página: 8
+
+
+
+
+Propiedades
+
+AlternateBackShade:        100                         AlternateBackThemeC        -1
+AlternateBackTint:         100                         BackShade:                 100
+BackTint:                  100                         DatasheetForeTheme         -1
+
+DatasheetGridlinesTh       -1                          DateCreated:               16/11/2014 8:22:31
+DefaultView:               2                           DisplayViewsOnShare        1
+FilterOnLoad:              Falso                       GUID:                      {guid {D1E66228-
+                                                                                  F50D-40CF-81B3-
+
+HideNewField:              Falso                       LastUpdated:               16/11/2014 8:23:27
+NameMap:                   Datos binarios largos       OrderByOn:                 Falso
+OrderByOnLoad:             Verdadero                   Orientation:               De izquieda a derecha
+
+PublishToWeb:              1                           ReadOnlyWhenDiscon         Falso
+RecordCount:               30                          ThemeFontIndex:            -1
+TotalsRow:                 Falso                       Updatable:                 Verdadero
+
+
+
+Columnas
+         Nombre                                                  Tipo                       Tamaño
+
+
+         subject_id                                              Entero largo                             4
+
+         subject_code                                            Texto                                   50
+
+         subject_group                                           Texto                                   50
+
+
+
+
+
+
+
+Relaciones
+
+
+
+        SubjectSmartphones_Mean_tidy_Axis_5
+
+                             Subject                       Smartphones_Mean
+
+
+                    subject_id                           subject_id
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Tabla: Subject                                                                                     Página: 9
+
+
+
+        SubjectSmartphones_Mean_tidy_Magnitude_5
+
+                             Subject                       Smartphones_Mean
+
+
+                    subject_id                           subject_id
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+Índices de tabla
+
+         Nombr                                    Número de
+
+         subject_id                               1
+                   Campos:
+
+                   subject_id                 scendente
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Base de datos:                                                                                    Página: 10
+
+
+
+
+Propiedades
+
+AccessVersion:             09.50                       ANSI Query Mode:           0
+CheckTruncatedNumF         1                           Clear Cache on Close:      0
+CollatingOrder:            General                     HasOfflineLists:           70
+
+NavPane Category:          0                           NavPane Closed:            0
+NavPane Sort By:           1                           NavPane View By:           0
+NavPane Width:             215                         Never Cache:               0
+
+Picture Property           0                           ProjVer:                   119
+QueryTimeout:              60                          RecordsAffected:           0
+Show Navigation            1                           ShowDocumentTabs:          Verdadero
+
+Theme Resource             Tema de Office              Themed Form                1
+Transactions:              Verdadero                   Updatable:                 Verdadero
+Use Microsoft Access       0                           UseMDIMode:                0
+
+Version:                   12.0                        WebDesignMode:             0
+
+
+
+
+Permisos de usuario
+
+         admin                      Eliminar, Leer permisos, Establecer permisos, Cambiar
+                                    propietario, Abrir o ejecutar, Abrir en modo exclusivo
+
+
+
+
+Permisos de grupo
+
+         Admins                     Eliminar, Leer permisos, Establecer permisos, Cambiar
+                                    propietario, Abrir o ejecutar, Abrir en modo exclusivo
+
+         Users                      Eliminar, Leer permisos, Establecer permisos, Cambiar
+                                    propietario, Abrir o ejecutar, Abrir en modo exclusivo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Relaciones: Todas                                                                                 Página: 11
+
+
+
+Relaciones
+
+
+
+        ActivitySmartphones_Mean_tidy_Axis_5
+
+                            Activity                       Smartphones_Mean
+
+
+                    activity_id                          activity_id
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+        ActivitySmartphones_Mean_tidy_Magnitude_5
+
+                            Activity                       Smartphones_Mean
+
+                    activity_id                          activity_id
+
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+        MSysNavPaneGroupCategoriesMSysNavPaneGroups
+
+
+                        MSysNavPaneGroup                   MSysNavPaneGroups
+
+                    Id                        1       ¥  GroupCategoryID
+
+
+
+                 Attributes:                 Forzado, Actualizaciones en cascada, Eliminaciones en
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+        MSysNavPaneGroupsMSysNavPaneGroupToObjects
+
+                        MSysNavPaneGroups                  MSysNavPaneGroup
+
+
+                    Id                        1       ¥  GroupID
+
+
+                 Attributes:                 Forzado, Actualizaciones en cascada, Eliminaciones en
+                                              cascada
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+
+
+
+
+
+ C:\ricardor\Coursera\Data_Cleaning\DB\Smartphones.accdb                                       November-16-14
+ Relaciones: Todas                                                                                 Página: 12
+
+
+
+        SubjectSmartphones_Mean_tidy_Axis_5
+
+                             Subject                       Smartphones_Mean
+
+
+                    subject_id                           subject_id
+
+
+                 Attributes:                 No forzado
+
+                 RelationshipType:           Uno a varios
+
+
+
+
+
+        SubjectSmartphones_Mean_tidy_Magnitude_5
+
+                             Subject                       Smartphones_Mean
+
+                    subject_id                           subject_id
+
+
+
+                 Attributes:                 No forzado
+                 RelationshipType:           Uno a varios
+

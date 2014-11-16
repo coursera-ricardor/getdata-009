@@ -1,28 +1,3 @@
-getdata-009
-===========
-
-Coursera Getting and Cleaning Data Project CodeBook 
-
-Sorry to be lazy, this section is incomplete
-programs/codebook.R produce part of the documentation.
-
-Tables:
-
-activity
-
-subject
-
-features
-
-smartphones_Mean_tidy_Axis_5
-
-smartphones_Mean_tidy_Magnitude_5
-
-smartphones_MeanStd_descriptive_3
-
-programs/codebook.R 
- - produce part of the documentation.
-
 Table: activity.csv
      |------->activity_id    integer   [1..6]
      |------->activity_description    character [WALKING|WALKING_UPSTAIRS|WALKING_DOWNSTAIRS|SITTING|STANDING|LAYING]
