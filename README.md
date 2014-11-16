@@ -26,7 +26,7 @@ tidyr
 To run the script<br>
 **Please, READ the "IMPORTANT" section in this document.**
 
-source('<directory where you download Git>/run_analysis.R')	
+source('directory where you download Git/run_analysis.R')	
 
 Tasks
 You will be required to submit: 
