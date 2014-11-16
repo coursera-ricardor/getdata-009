@@ -23,7 +23,7 @@ Libraries used
 data.table
 tidyr
 
-To run the script
+To run the script<br>
 **Please, READ the "IMPORTANT" section in this document.**
 
 source('<directory where you download Git>/run_analysis.R')	
