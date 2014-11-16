@@ -34,7 +34,7 @@ You will be required to submit:
 2) a link to a Github repository with your script for performing the analysis, and 
 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md.
 
-# Program: run_analysis.R  
+ Program: run_analysis.R  
  Author: Ricardo Rodriguez Erdmenger 2014/11
 
   The objective of this script is to:
@@ -60,7 +60,7 @@ Look for the variables "I_" specially "dWorkingDir". The script won't run if you
 b) the output files will be in csv format, not txt.This to read them faster in Excel and see the contents.
 
 =================================================================================
- Merge calculated Datasets
+* Merge calculated Datasets*
 
        1.1) Identify Subjects from UCI HAR Dataset/XXXXXXXX/subject_XXXXXXXX.txt file, where
            XXXXXXXX could be "test" or "train"
