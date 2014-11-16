@@ -8,17 +8,12 @@ programs/codebook.R produce part of the documentation.
 
 Tables:
 
-activity
-
-subject
-
-features
-
-smartphones_Mean_tidy_Axis_5
-
-smartphones_Mean_tidy_Magnitude_5
-
-smartphones_MeanStd_descriptive_3
+* activity
+* subject
+* features
+* smartphones_Mean_tidy_Axis_5
+* smartphones_Mean_tidy_Magnitude_5
+* smartphones_MeanStd_descriptive_3
 
 programs/codebook.R 
   produce part of the documentation.
