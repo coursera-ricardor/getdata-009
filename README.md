@@ -3,6 +3,11 @@ getdata-009
 
 Coursera repository Getting and Cleaning Data
 
+Update- 24/11/2014 - As you will see, I didn't read the instructions very well.
+You won't find:
+independent tidy data set with the average of each variable for each activity and each subject.
+- It is NOT calculated in my program.
+
 Quick View at the end of the script:
 Working Directory  (created by Git)
 
