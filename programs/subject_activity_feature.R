@@ -1,5 +1,5 @@
 # Program: subject_activity_feature.R  
-# Author: Ricardo Rodriguez Erdmenger 2014/11
+# Author: Ricardo Rodriguez 2014/11
 #
 # Create the files in the tidy data directory:
 #

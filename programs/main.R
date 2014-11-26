@@ -1,5 +1,5 @@
 # Program: main.R  
-# Author: Ricardo Rodriguez Erdmenger 2014/11
+# Author: Ricardo Rodriguez 2014/11
 #
 #    Funtions to run the script
 #

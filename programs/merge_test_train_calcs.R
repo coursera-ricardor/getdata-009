@@ -1,5 +1,5 @@
 # Program: merge_test_train_calcs.R  
-# Author: Ricardo Rodriguez Erdmenger 2014/11
+# Author: Ricardo Rodriguez 2014/11
 #
 # Code to merge the files contained in the 
 # directories:

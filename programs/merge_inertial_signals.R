@@ -1,5 +1,5 @@
 # Program: merge_inertial_signals.R  
-# Author: Ricardo Rodriguez Erdmenger 2014/11
+# Author: Ricardo Rodriguez 2014/11
 #
 # Code to merge the files contained in the 
 # directories:

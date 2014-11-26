@@ -1,5 +1,5 @@
 # Program: run_analysis.R  
-# Author: Ricardo Rodriguez Erdmenger 2014/11
+# Author: Ricardo Rodriguez 2014/11
 #   additional information in the README.md file
 
 # NOTES About the Dataset.

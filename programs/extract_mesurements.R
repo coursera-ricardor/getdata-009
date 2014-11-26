@@ -1,5 +1,5 @@
 # Program: extract_mesurements.R  
-# Author: Ricardo Rodriguez Erdmenger 2014/11
+# Author: Ricardo Rodriguez 2014/11
 #
 # =================================================================================
 # 2) Extracts only the measurements on the mean and standard deviation for each measurement. 
